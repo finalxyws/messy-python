@@ -19,6 +19,7 @@ output_label.pack()
 output_box = tk.Entry(root)
 output_box.pack()
 
+
 # Function to translate the text
 def translate_text():
     # Get the text from the input box
@@ -28,12 +29,13 @@ def translate_text():
     destination_language = destination_var.get()
 
     # Use the Googletrans library to translate the text to the desired language
-    translator = Translator(service_urls='translate.google.cn')
+    translator = Translator(service_urls='translate.google.hk')
     translated_text = translator.translate(text, dest=destination_language)
 
     # Set the translated text in the output box
     output_box.delete(0, tk.END)
     output_box.insert(0, translated_text.text)
+
 
 # Create the button to translate the text
 translate_button = tk.Button(root, text="Translate", command=translate_text)
@@ -43,7 +45,7 @@ translate_button.pack()
 destination_label = tk.Label(root, text="Select the language you want to translate to:")
 destination_label.pack()
 destination_var = tk.StringVar()
-destination_box = ttk.Combobox(root, textvariable=destination_var, values=["English", "Chinese", "Spanish", "Japanese"])
+destination_box = ttk.Combobox(root, textvariable=destination_var, values=["english", "chinese", "spanish", "japanese"])
 destination_box.pack()
 
 # Run the main loop
