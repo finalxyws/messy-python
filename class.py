@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # coding: utf-8
 
 class Person():
@@ -19,9 +20,12 @@ class Person():
     def person_prop(self):
         print('This is a person class. {0}'.format(self.var_prop))
 
+    def change_prop(self):
+        self.var_prop = input('Please input a new prop: ')
+        print('The new prop is: {0}'.format(self.var_prop))
+
 
 p1 = Person('zhangsan', 20)
 p1.eat()
 p1.sleep()
 p1.play()
-p1.person_prop()
