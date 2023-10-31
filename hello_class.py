@@ -39,15 +39,15 @@ class PersonGeneral(Person):
         print('Hello, General {0}.'.format(self.name))
 
 
-p1 = Person('zhang san', 20, 'male')
+if __name__ == '__main__':
+    print('hello_class.py is executed.')
+    p1 = Person('zhang san', 20, 'male')
+    p1.print_info()
 
-p1.print_info()
-# p1.eat()
-# p1.sleep()
-# p1.play()
+    pVIP = PersonVIP('Sheldon', 40, 'male')
+    pVIP.print_info()
 
-pVIP = PersonVIP('Sheldon', 40, 'male')
-pVIP.print_info()
-
-pGeneral = PersonGeneral('Lucy', 30, 'female')
-pGeneral.print_info()
+    pGeneral = PersonGeneral('Olivia', 30, 'female')
+    pGeneral.print_info()
+else:
+    print('hello_class.py is imported.')
