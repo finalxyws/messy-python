@@ -5,6 +5,8 @@ from enum import Enum, unique
 
 Enum('Month', ('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'))
 Enum('Weekday', ('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fir', 'Sat'))
+
+
 @unique
 class Weekday(Enum):
     Sun = 0
@@ -15,9 +17,10 @@ class Weekday(Enum):
     Fir = 5
     Sat = 6
 
+
 @unique
 class Month(Enum):
-    Jan = 'Janurary'
+    Jan = 'January'
     Feb = 'February'
     Mar = 'March'
     Apr = 'April'
@@ -33,7 +36,7 @@ class Month(Enum):
 
 if __name__ == '__main__':
     print(Weekday.Sun, '---', Weekday.Sun.name, '---', Weekday.Sun.value)
-    for(name, member) in Month.__members__.items():
+    for (name, member) in Month.__members__.items():
         print(name, '---', member, '---', member.value)
-    for(name, member) in Weekday.__members__.items():
+    for (name, member) in Weekday.__members__.items():
         print(name, '---', member, '---', member.value)
